@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country List</title>
+</head>
+<body bgcolor="DarkGray">
+    <h1>Countries</h1>
+    <h3>
+        {% for country in countries %}
+        {{ country.id }}. {{ country.title }}
+        <a href="{% url 'country_detail_url' country.id %}">Show this country</a>
+        <p></p>
+        {% endfor %}
+    </h3>
+    <br>
+    <a href="{% url 'country_create_url' %}">Create New Country</a>
+</body>
+</html>

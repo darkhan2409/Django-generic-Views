@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country Detail</title>
+</head>
+<body bgcolor="DarkGrey">
+    <a href="{% url 'country_list_url' %}">Back to all Countries</a>
+    <h2>{{ country.title }}</h2>
+    <p></p>
+    <h3>Capital - {{ country.capital }}</h3>
+    <p></p>
+    <i>Interesting fact: {{ country.description }}</i>
+    <p></p>
+    <p>Population, million: {{ country.population }}</p>
+    <p></p>
+    <p>Square, million km2: {{ country.square }}</p>
+    <br>
+    <a href="{% url 'country_update_url' country.id %}">Update this Country</a>
+    <p></p>
+    <a href="{% url 'country_delete_url' country.id %}">Delete this Country</a>
+</body>
+</html>

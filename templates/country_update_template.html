@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country Update</title>
+</head>
+<body bgcolor="DarkGray">
+    <a href="{% url 'country_detail_url' country.id %}">Get Back</a>
+    <form action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Update">
+    </form>
+</body>
+</html>

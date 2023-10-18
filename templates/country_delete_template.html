@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country Delete</title>
+</head>
+<body bgcolor="DarkGrey">
+    <h2>Are you sure you want to delete {{ country.title }}?</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+        <p></p>
+    </form>
+    <form action="{% url 'country_detail_url' country.id %}" method="get">
+        <input type="submit" value="No, Get Back">
+    </form>
+</body>
+</html>
